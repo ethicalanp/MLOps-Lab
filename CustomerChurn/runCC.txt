@@ -1,0 +1,18 @@
+docker - docker run -p 8000:8000 customer-churn-api
+prometheus - powershell -ExecutionPolicy Bypass -File .\start-prometheus.ps1
+
+(OpsEnv) D:\BROTO\week43\kubeflow>mlflow server --host 0.0.0.0 --port 5000 --workers 1 --allowed-hosts "localhost:5000,127.0.0.1:5000,host.docker.internal:5000"
+
+D:\BROTO\week43\TFX-Iris>docker run --rm ^
+More?   --entrypoint bash ^
+More?   -v "D:\BROTO\week43\TFX-Iris:/workspace/TFX-Iris" ^
+More?   -w /workspace/TFX-Iris ^
+More?   tensorflow/tfx:1.21.0 ^
+More?   -c "pip install protobuf==6.31.1 && python pipeline.py"
+ 
+
+
+(OpsEnv) D:\BROTO\week43\kubeflow>kubectl port-forward svc/ml-pipeline-ui 8080:80 -n kubeflow
+
+(OpsEnv) D:\BROTO\week43\IrisClassification>mlflow ui
+
